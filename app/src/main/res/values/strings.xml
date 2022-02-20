@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">gb04-android-on-kotlin-start</string>
+    <string name="click_me_label">Click me!</string>
 </resources>
