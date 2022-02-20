@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">gb04-android-on-kotlin-start</string>
+    <string name="test_data_class_label">Test data class</string>
+    <string name="test_while_cycle_label">Test while cycle</string>
+    <string name="test_for_cycle_label">Test for cycle</string>
+    <string name="show_toast_label">Show toast</string>
 </resources>
