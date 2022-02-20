@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var clickMeButton: Button
+    lateinit var showToastButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,9 +17,29 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-        clickMeButton = findViewById<Button>(R.id.click_me_button)
-        clickMeButton.setOnClickListener {
+        findViewById<Button>(R.id.show_toast_button).setOnClickListener {
             Toast.makeText(this, "Button clicked", Toast.LENGTH_SHORT).show()
+        }
+
+        findViewById<Button>(R.id.test_data_class_button).setOnClickListener {
+            val murzik = Cat("Мурзик", 4)
+            Toast.makeText(this, murzik.toString(), Toast.LENGTH_SHORT).show()
+
+            val barsik = murzik.copy(name = "Барсик")
+            println(barsik)
+        }
+
+        findViewById<Button>(R.id.test_while_button).setOnClickListener {
+            var i = 1
+            while (i < 5) {
+                println("While ${i++}")
+            }
+        }
+
+        findViewById<Button>(R.id.test_for_button).setOnClickListener {
+            for (i in 5 downTo 1) {
+                println("for $i")
+            }
         }
     }
 }
